@@ -10,11 +10,12 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "."
-    create: true
-    extension: "html"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "general"
+    label: "Site Content"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "index"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
