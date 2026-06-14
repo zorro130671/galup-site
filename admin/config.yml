@@ -3,7 +3,7 @@ backend:
   repo: zorro130671/galup-site
   branch: master
   auth_type: pkce
-  app_id: REPLACE_WITH_YOUR_GITHUB_OAUTH_CLIENT_ID
+  app_id: Ov23liUz6VX1dMHJygr8
 
 site_url: https://galup-site.zahipad.workers.dev
 display_url: https://galup-site.zahipad.workers.dev
