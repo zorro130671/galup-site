@@ -5,8 +5,8 @@ backend:
   auth_type: pkce
   app_id: REPLACE_WITH_YOUR_GITHUB_OAUTH_CLIENT_ID
 
-site_url: https://galup-site.pages.dev
-display_url: https://galup-site.pages.dev
+site_url: https://galup-site.zahipad.workers.dev
+display_url: https://galup-site.zahipad.workers.dev
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
