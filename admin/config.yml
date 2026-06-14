@@ -2,46 +2,65 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  - name: "homepage"
-    label: "Home Page"
+  - name: "content"
+    label: "Website Content"
     files:
-      - name: "content"
-        label: "Page Content"
+      - name: "main"
+        label: "Edit Website Text"
         file: "_data/content.json"
+        format: json
         fields:
           - label: "Hero Section"
             name: "hero"
             widget: "object"
             fields:
-              - { label: "Main Headline", name: "headline", widget: "string" }
-              - { label: "Highlighted Phrase", name: "headline_em", widget: "string" }
-              - { label: "Subheading", name: "subheading", widget: "text" }
+              - {label: "Main Headline", name: "headline", widget: "string", hint: "The big heading on the front page"}
+              - {label: "Subheading Text", name: "subheading", widget: "text", hint: "The paragraph below the headline"}
+              - {label: "Donate Button URL", name: "donate_url", widget: "string"}
 
           - label: "Stats Bar"
             name: "stats"
             widget: "object"
             fields:
-              - { label: "Community Programs", name: "programs", widget: "number", value_type: "int" }
-              - { label: "Corporate Partners", name: "partners", widget: "number", value_type: "int" }
-              - { label: "Individual Donors", name: "donors", widget: "number", value_type: "int" }
-              - { label: "Team Members", name: "team", widget: "number", value_type: "int" }
+              - {label: "Number of Programs", name: "programs", widget: "string"}
+              - {label: "Programs Label", name: "programs_label", widget: "string"}
+              - {label: "Number of Partners", name: "partners", widget: "string"}
+              - {label: "Partners Label", name: "partners_label", widget: "string"}
+              - {label: "Number of Donors", name: "donors", widget: "string"}
+              - {label: "Donors Label", name: "donors_label", widget: "string"}
+              - {label: "Number of Team Members", name: "team", widget: "string"}
+              - {label: "Team Label", name: "team_label", widget: "string"}
 
-          - label: "About Section"
+          - label: "About Us Section"
             name: "about"
             widget: "object"
             fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph 1", name: "p1", widget: "text" }
-              - { label: "Paragraph 2", name: "p2", widget: "text" }
-              - { label: "Paragraph 3", name: "p3", widget: "text" }
+              - {label: "Section Heading", name: "heading", widget: "string"}
+              - {label: "First Paragraph", name: "paragraph1", widget: "text"}
+              - {label: "Second Paragraph", name: "paragraph2", widget: "text"}
+              - {label: "Third Paragraph", name: "paragraph3", widget: "text"}
 
-          - label: "Vision & Mission"
-            name: "visionmission"
+          - label: "Our Vision"
+            name: "vision"
             widget: "object"
             fields:
-              - { label: "Vision Text", name: "vision", widget: "text" }
-              - { label: "Mission Text", name: "mission", widget: "text" }
+              - {label: "Vision Heading", name: "heading", widget: "string"}
+              - {label: "Vision Text", name: "text", widget: "text"}
+
+          - label: "Our Mission"
+            name: "mission"
+            widget: "object"
+            fields:
+              - {label: "Mission Heading", name: "heading", widget: "string"}
+              - {label: "Mission Text", name: "text", widget: "text"}
+
+          - label: "Contact Details"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Email Address", name: "email", widget: "string"}
+              - {label: "Address", name: "address", widget: "string"}
