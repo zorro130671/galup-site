@@ -567,8 +567,8 @@ input,textarea{font-family:inherit;font-size:inherit}
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-tag">Non-Profit &nbsp;·&nbsp; Singapore</p>
-    <h1 class="hero-h1">Every Woman Deserves<br>a <em>Second Chance.</em></h1>
-    <p class="hero-sub">GalUP walks alongside incarcerated and formerly incarcerated women in Singapore — through meals, mentorship, health education, and the belief that every story deserves a new chapter.</p>
+    <h1 class="hero-h1" id="cms-hero-h1">Every Woman Deserves<br>a <em>Second Chance.</em></h1>
+    <p class="hero-sub" id="cms-hero-sub">GalUP walks alongside incarcerated and formerly incarcerated women in Singapore — through meals, mentorship, health education, and the belief that every story deserves a new chapter.</p>
     <div class="hero-ctas">
       <a href="https://www.galup.live/donation" class="btn btn-coral btn-lg" target="_blank" rel="noopener">Donate Now</a>
       <a href="#volunteer" class="btn btn-outline-white btn-lg">Become an Ally</a>
@@ -579,10 +579,10 @@ input,textarea{font-family:inherit;font-size:inherit}
 <!-- TRUST BAR -->
 <div class="trust">
   <div class="trust-in">
-    <div class="trust-cell rv"><span class="trust-n counter" data-target="7">0</span><span class="trust-l">Community Programs</span></div>
-    <div class="trust-cell rv"><span class="trust-n counter" data-target="24">0</span><span class="trust-l">Corporate Partners</span></div>
-    <div class="trust-cell rv"><span class="trust-n counter" data-target="14">0</span><span class="trust-l">Individual Donors</span></div>
-    <div class="trust-cell rv"><span class="trust-n counter" data-target="6">0</span><span class="trust-l">Team Members</span></div>
+    <div class="trust-cell rv"><span class="trust-n counter" data-target="7" data-cms-counter="programs">0</span><span class="trust-l">Community Programs</span></div>
+    <div class="trust-cell rv"><span class="trust-n counter" data-target="24" data-cms-counter="partners">0</span><span class="trust-l">Corporate Partners</span></div>
+    <div class="trust-cell rv"><span class="trust-n counter" data-target="14" data-cms-counter="donors">0</span><span class="trust-l">Individual Donors</span></div>
+    <div class="trust-cell rv"><span class="trust-n counter" data-target="6" data-cms-counter="team">0</span><span class="trust-l">Team Members</span></div>
   </div>
 </div>
 
@@ -599,10 +599,10 @@ input,textarea{font-family:inherit;font-size:inherit}
       </div>
       <div class="rv-r">
         <p class="kicker">Our Story</p>
-        <h2 class="h2">Walking Alongside Women Others Have Left Behind</h2>
-        <p>GalUP — <strong>Gals Up</strong> — was founded on a simple belief: that incarcerated and formerly incarcerated women deserve more than a system that forgets them the moment they leave.</p>
-        <p>We show up — with meals, mentorship, health education, and vocational training — building genuine relationships that last far beyond prison walls. Because lasting change only happens when people feel truly seen.</p>
-        <p>Today, GalUP runs <strong>seven community programs</strong>, partners with over 24 organisations, and is backed by a community of donors who believe in second chances.</p>
+        <h2 class="h2" id="cms-about-h2">Walking Alongside Women Others Have Left Behind</h2>
+        <p id="cms-about-p1">GalUP — <strong>Gals Up</strong> — was founded on a simple belief: that incarcerated and formerly incarcerated women deserve more than a system that forgets them the moment they leave.</p>
+        <p id="cms-about-p2">We show up — with meals, mentorship, health education, and vocational training — building genuine relationships that last far beyond prison walls. Because lasting change only happens when people feel truly seen.</p>
+        <p id="cms-about-p3">Today, GalUP runs <strong>seven community programs</strong>, partners with over 24 organisations, and is backed by a community of donors who believe in second chances.</p>
         <a href="#mission" class="btn btn-navy">Our Mission &rarr;</a>
         <div class="about-stats">
           <div>
@@ -637,14 +637,14 @@ input,textarea{font-family:inherit;font-size:inherit}
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1l2.1-2.1M17 7l2.1-2.1"/></svg>
         </div>
         <h3>Our Vision</h3>
-        <p>A Singapore where every woman — regardless of her past — is truly seen, genuinely supported, and given the space to flourish. Where the measure of justice includes the healing it makes possible, not only the punishment it delivers.</p>
+        <p id="cms-vision">A Singapore where every woman — regardless of her past — is truly seen, genuinely supported, and given the space to flourish. Where the measure of justice includes the healing it makes possible, not only the punishment it delivers.</p>
       </div>
       <div class="mv-card rv-scale" style="transition-delay:100ms">
         <div class="mv-card-icon">
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3>Our Mission</h3>
-        <p>To provide incarcerated and formerly incarcerated women in Singapore with holistic, sustained support — through nourishment, health, leadership, and skills — so that every woman has what she needs to write a new chapter on her own terms.</p>
+        <p id="cms-mission">To provide incarcerated and formerly incarcerated women in Singapore with holistic, sustained support — through nourishment, health, leadership, and skills — so that every woman has what she needs to write a new chapter on her own terms.</p>
       </div>
     </div>
     <div class="mv-photo rv">
@@ -981,13 +981,48 @@ input,textarea{font-family:inherit;font-size:inherit}
     </div>
   </div>
   <div class="footer-bottom">
-    © 2024 GalUP. All rights reserved. &nbsp;·&nbsp; <a href="https://www.galup.live" target="_blank" rel="noopener">galup.live</a> &nbsp;·&nbsp; Singapore
+    &copy; 2024 GalUP. All rights reserved. &nbsp;&middot;&nbsp; <a href="https://www.galup.live" target="_blank" rel="noopener">galup.live</a> &nbsp;&middot;&nbsp; Singapore
   </div>
 </footer>
 
 <script>
 (function(){
 'use strict';
+
+/* ── CMS CONTENT LOADER ── */
+(function loadCms(){
+  fetch('/_data/content.json')
+    .then(function(r){return r.ok?r.json():null;})
+    .then(function(d){
+      if(!d)return;
+      var g=function(id){return document.getElementById(id);};
+      if(d.hero){
+        var h=g('cms-hero-h1');
+        if(h)h.innerHTML=d.hero.headline+'<br>a <em>'+d.hero.headline_em+'</em>';
+        var s=g('cms-hero-sub');
+        if(s)s.textContent=d.hero.subheading||'';
+      }
+      if(d.stats){
+        document.querySelectorAll('[data-cms-counter]').forEach(function(el){
+          var k=el.getAttribute('data-cms-counter');
+          if(d.stats[k]!=null)el.setAttribute('data-target',''+d.stats[k]);
+        });
+      }
+      if(d.about){
+        var ah=g('cms-about-h2');
+        if(ah)ah.textContent=d.about.heading||'';
+        ['p1','p2','p3'].forEach(function(k){
+          var el=g('cms-about-'+k);
+          if(el&&d.about[k])el.textContent=d.about[k];
+        });
+      }
+      if(d.visionmission){
+        var v=g('cms-vision'),m=g('cms-mission');
+        if(v)v.textContent=d.visionmission.vision||'';
+        if(m)m.textContent=d.visionmission.mission||'';
+      }
+    }).catch(function(){});
+})();
 
 /* Nav scroll */
 var nav = document.getElementById('nav');
