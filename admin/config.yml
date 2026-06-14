@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: zorro130671/galup-site
+  branch: master
+
+site_url: https://galup-site.zahipad.workers.dev
+display_url: https://galup-site.zahipad.workers.dev
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "."
+    create: true
+    extension: "html"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
