@@ -2,19 +2,52 @@ backend:
   name: github
   repo: zorro130671/galup-site
   branch: master
+  auth_type: pkce
+  app_id: REPLACE_WITH_YOUR_GITHUB_OAUTH_CLIENT_ID
 
-site_url: https://galup-site.zahipad.workers.dev
-display_url: https://galup-site.zahipad.workers.dev
+site_url: https://galup-site.pages.dev
+display_url: https://galup-site.pages.dev
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
-media_library:
-  name: "uploadcare"
 
 collections:
-  - name: "home"
+  - name: "homepage"
     label: "Home Page"
-    file: "index.html"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+    files:
+      - name: "content"
+        label: "Page Content"
+        file: "_data/content.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Main Headline", name: "headline", widget: "string", hint: "First line of the hero banner (e.g. 'Every Woman Deserves')" }
+              - { label: "Highlighted Phrase", name: "headline_em", widget: "string", hint: "The coral-coloured words on the second line (e.g. 'Second Chance.')" }
+              - { label: "Subheading", name: "subheading", widget: "text", hint: "The paragraph beneath the headline" }
+
+          - label: "Stats Bar"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Community Programs", name: "programs", widget: "number", value_type: "int" }
+              - { label: "Corporate Partners", name: "partners", widget: "number", value_type: "int" }
+              - { label: "Individual Donors", name: "donors", widget: "number", value_type: "int" }
+              - { label: "Team Members", name: "team", widget: "number", value_type: "int" }
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph 1", name: "p1", widget: "text" }
+              - { label: "Paragraph 2", name: "p2", widget: "text" }
+              - { label: "Paragraph 3", name: "p3", widget: "text" }
+
+          - label: "Vision & Mission"
+            name: "visionmission"
+            widget: "object"
+            fields:
+              - { label: "Vision Text", name: "vision", widget: "text" }
+              - { label: "Mission Text", name: "mission", widget: "text" }

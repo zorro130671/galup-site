@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "headline": "Every Woman Deserves",
+    "headline_em": "Second Chance.",
+    "subheading": "GalUP walks alongside incarcerated and formerly incarcerated women in Singapore — through meals, mentorship, health education, and the belief that every story deserves a new chapter."
+  },
+  "stats": {
+    "programs": 7,
+    "partners": 24,
+    "donors": 14,
+    "team": 6
+  },
+  "about": {
+    "heading": "Walking Alongside Women Others Have Left Behind",
+    "p1": "GalUP — Gals Up — was founded on a simple belief: that incarcerated and formerly incarcerated women deserve more than a system that forgets them the moment they leave.",
+    "p2": "We show up — with meals, mentorship, health education, and vocational training — building genuine relationships that last far beyond prison walls. Because lasting change only happens when people feel truly seen.",
+    "p3": "Today, GalUP runs seven community programs, partners with over 24 organisations, and is backed by a community of donors who believe in second chances."
+  },
+  "visionmission": {
+    "vision": "A Singapore where every woman — regardless of her past — is truly seen, genuinely supported, and given the space to flourish. Where the measure of justice includes the healing it makes possible, not only the punishment it delivers.",
+    "mission": "To provide incarcerated and formerly incarcerated women in Singapore with holistic, sustained support — through nourishment, health, leadership, and skills — so that every woman has what she needs to write a new chapter on her own terms."
+  }
+}
