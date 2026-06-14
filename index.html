@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>!function(){var h=location.hash;if(h&&/invite_token|recovery_token|confirmation_token|access_token/.test(h))location.replace('/admin/'+h)}()</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GalUP — Every Woman Deserves a Second Chance</title>
 <meta name="description" content="GalUP is a Singapore nonprofit supporting incarcerated and formerly incarcerated women through community programs, mentorship, and holistic care.">
@@ -168,7 +169,6 @@ input,textarea{font-family:inherit;font-size:inherit}
   display:flex;align-items:center;justify-content:center;
   color:#fff;
   overflow:hidden;
-  /* Desktop: tall cinematic */
   height:90vh;
   min-height:560px;
   max-height:800px;
@@ -469,29 +469,9 @@ input,textarea{font-family:inherit;font-size:inherit}
   #nav{padding:12px 0}
   .nav-links,.nav-donate{display:none}
   .burger{display:flex}
-  /* Hero — proper landscape on mobile */
-  .hero{
-    height:auto;
-    min-height:unset;
-    max-height:unset;
-    padding:0;
-    aspect-ratio:16/9;
-  }
-  .hero-bg{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center center;
-  }
-  .hero-content{
-    padding:0 20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    height:100%;
-  }
+  .hero{height:auto;min-height:unset;max-height:unset;padding:0;aspect-ratio:16/9}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
+  .hero-content{padding:0 20px;display:flex;flex-direction:column;justify-content:center;height:100%}
   .hero-tag{display:none}
   .hero-h1{font-size:clamp(1.2rem,5vw,1.9rem);margin-bottom:8px}
   .hero-sub{display:none}
@@ -547,7 +527,7 @@ input,textarea{font-family:inherit;font-size:inherit}
   </div>
 </header>
 
-<!-- MOBILE NAV (fixed, outside hero — no clipping) -->
+<!-- MOBILE NAV -->
 <div id="mob-nav" role="dialog" aria-modal="true" aria-label="Navigation">
   <a href="#about" class="mob-lnk">About</a>
   <a href="#mission" class="mob-lnk">Mission</a>
@@ -561,9 +541,7 @@ input,textarea{font-family:inherit;font-size:inherit}
 
 <!-- HERO -->
 <section id="hero" class="hero">
-  <img class="hero-bg"
-    src="https://static.wixstatic.com/media/f42fd7_e2a598b7841d464889d242e661d8c7bc~mv2.jpeg"
-    alt="GalUP community">
+  <img class="hero-bg" src="https://static.wixstatic.com/media/f42fd7_e2a598b7841d464889d242e661d8c7bc~mv2.jpeg" alt="GalUP community">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-tag">Non-Profit &nbsp;·&nbsp; Singapore</p>
@@ -605,18 +583,9 @@ input,textarea{font-family:inherit;font-size:inherit}
         <p id="cms-about-p3">Today, GalUP runs <strong>seven community programs</strong>, partners with over 24 organisations, and is backed by a community of donors who believe in second chances.</p>
         <a href="#mission" class="btn btn-navy">Our Mission &rarr;</a>
         <div class="about-stats">
-          <div>
-            <span class="astat-n">7</span>
-            <span class="astat-l">Programs</span>
-          </div>
-          <div>
-            <span class="astat-n">24+</span>
-            <span class="astat-l">Partners</span>
-          </div>
-          <div>
-            <span class="astat-n">6</span>
-            <span class="astat-l">Team Members</span>
-          </div>
+          <div><span class="astat-n">7</span><span class="astat-l">Programs</span></div>
+          <div><span class="astat-n">24+</span><span class="astat-l">Partners</span></div>
+          <div><span class="astat-n">6</span><span class="astat-l">Team Members</span></div>
         </div>
       </div>
     </div>
@@ -681,56 +650,48 @@ input,textarea{font-family:inherit;font-size:inherit}
       <p class="lead">Seven programs, each addressing a distinct need — together, they support the whole person.</p>
     </div>
     <div class="impact-grid">
-
       <div class="prog-card rv">
         <div class="prog-icon"><img src="https://static.wixstatic.com/media/f42fd7_7b9b31178579493a8a7f902ba4641353~mv2.png" alt="" loading="lazy"></div>
         <h3>Spoonful of Hope</h3>
         <p>Shared meals and genuine conversation inside prison walls — because dignity begins with being seen, and every woman deserves a table to come to.</p>
         <a href="https://www.galup.live/about-3-12" target="_blank" rel="noopener">Learn more &rarr;</a>
       </div>
-
       <div class="prog-card rv">
         <div class="prog-icon"><img src="https://static.wixstatic.com/media/f42fd7_5ddfef127eca45089081047546428347~mv2.png" alt="" loading="lazy"></div>
         <h3>LEAD HER</h3>
         <p>Building confidence, communication, and the quiet courage it takes to step forward — because leadership is a capacity that lives in every woman.</p>
         <a href="https://www.galup.live/about-3-5" target="_blank" rel="noopener">Learn more &rarr;</a>
       </div>
-
       <div class="prog-card rv">
         <div class="prog-icon"><img src="https://static.wixstatic.com/media/f42fd7_775e969090f740e598c25e31c5411b68~mv2.png" alt="" loading="lazy"></div>
         <h3>Project Breast Control</h3>
         <p>Bringing breast cancer awareness and health literacy to women who are too often overlooked — because your body is worth understanding and protecting.</p>
         <a href="https://www.galup.live/about-3-13" target="_blank" rel="noopener">Learn more &rarr;</a>
       </div>
-
       <div class="prog-card rv">
         <div class="prog-icon"><img src="https://static.wixstatic.com/media/f42fd7_eb96a7eb247b4c5098be5113d02a7642~mv2.png" alt="" loading="lazy"></div>
         <h3>Signature Dinner</h3>
         <p>Our flagship annual event — gathering advocates, donors, and community leaders at one table to build the wider movement that lasting change requires.</p>
         <a href="https://www.galup.live/about-3-14" target="_blank" rel="noopener">Learn more &rarr;</a>
       </div>
-
       <div class="prog-card rv">
         <div class="prog-icon"><img src="https://static.wixstatic.com/media/f42fd7_2ecd5f980329431c9138813e984225dd~mv2.png" alt="" loading="lazy"></div>
         <h3>360 LIFEstyle</h3>
         <p>A holistic wellbeing programme addressing physical, emotional, and mental health as one interconnected whole — because a woman who is truly well can face what comes next.</p>
         <a href="https://www.galup.live/about-3-15" target="_blank" rel="noopener">Learn more &rarr;</a>
       </div>
-
       <div class="prog-card rv">
         <div class="prog-icon"><img src="https://static.wixstatic.com/media/f42fd7_ee34cb9197e64c8eb2bcc6286938015f~mv2.png" alt="" loading="lazy"></div>
         <h3>Tifi Inbound</h3>
         <p>Practical vocational training with real industry partners — because economic independence is the foundation every new chapter is built on.</p>
         <a href="https://www.galup.live/about-3-16" target="_blank" rel="noopener">Learn more &rarr;</a>
       </div>
-
       <div class="prog-card rv">
         <div class="prog-icon"><img src="https://static.wixstatic.com/media/f42fd7_87d9075f56fd4a4abf20f6eaa6c94f02~mv2.png" alt="" loading="lazy"></div>
         <h3>Tifi Inbound II</h3>
         <p>Building on what works — expanding pathways, deepening industry partnerships, and growing a community of women stepping confidently into their futures.</p>
         <a href="https://www.galup.live/about-3-17" target="_blank" rel="noopener">Learn more &rarr;</a>
       </div>
-
     </div>
     <div class="impact-cta rv">
       <a href="https://www.galup.live/donation" class="btn btn-navy" target="_blank" rel="noopener">Support These Programs &rarr;</a>
@@ -759,20 +720,7 @@ input,textarea{font-family:inherit;font-size:inherit}
     </div>
     <p class="donors-label rv">Individual Donors</p>
     <div class="donors-pills rv">
-      <span class="pill">Mrs Margaret Wong</span>
-      <span class="pill">Rachel Ong</span>
-      <span class="pill">Ivan Howden</span>
-      <span class="pill">Tricia Fok</span>
-      <span class="pill">Rita Samad</span>
-      <span class="pill">Mohd Dali Sharif</span>
-      <span class="pill">Dr. James Andrade</span>
-      <span class="pill">Sanjeev Gathani</span>
-      <span class="pill">Laila White</span>
-      <span class="pill">Ho Soo Hui</span>
-      <span class="pill">Kaserin Chen</span>
-      <span class="pill">The Awab Family</span>
-      <span class="pill">Shubrarayan Govindasamy</span>
-      <span class="pill">Magesh Das</span>
+      <span class="pill">Mrs Margaret Wong</span><span class="pill">Rachel Ong</span><span class="pill">Ivan Howden</span><span class="pill">Tricia Fok</span><span class="pill">Rita Samad</span><span class="pill">Mohd Dali Sharif</span><span class="pill">Dr. James Andrade</span><span class="pill">Sanjeev Gathani</span><span class="pill">Laila White</span><span class="pill">Ho Soo Hui</span><span class="pill">Kaserin Chen</span><span class="pill">The Awab Family</span><span class="pill">Shubrarayan Govindasamy</span><span class="pill">Magesh Das</span>
     </div>
   </div>
 </section>
@@ -837,22 +785,10 @@ input,textarea{font-family:inherit;font-size:inherit}
         <h2 class="h2 h2-white">Become an Ally</h2>
         <p>It doesn't take a special skill. It takes showing up — for a woman who has been told too many times that no one will.</p>
         <ul class="vol-list">
-          <li class="vol-item">
-            <span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            Share your expertise through skills-based volunteering
-          </li>
-          <li class="vol-item">
-            <span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            Mentor women building confidence and new careers
-          </li>
-          <li class="vol-item">
-            <span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            Support community programs that run on human connection
-          </li>
-          <li class="vol-item">
-            <span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            Be part of a community that believes in second chances
-          </li>
+          <li class="vol-item"><span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Share your expertise through skills-based volunteering</li>
+          <li class="vol-item"><span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Mentor women building confidence and new careers</li>
+          <li class="vol-item"><span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Support community programs that run on human connection</li>
+          <li class="vol-item"><span class="vol-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Be part of a community that believes in second chances</li>
         </ul>
       </div>
       <div class="form-wrap rv-r">
@@ -860,27 +796,12 @@ input,textarea{font-family:inherit;font-size:inherit}
         <p class="form-sub">All skill sets and backgrounds welcome.</p>
         <form id="volForm">
           <div class="form-row">
-            <div class="fg">
-              <label for="vf1">First Name <span class="req">*</span></label>
-              <input id="vf1" type="text" required placeholder="First name" autocomplete="given-name">
-            </div>
-            <div class="fg">
-              <label for="vf2">Last Name <span class="req">*</span></label>
-              <input id="vf2" type="text" required placeholder="Last name" autocomplete="family-name">
-            </div>
+            <div class="fg"><label for="vf1">First Name <span class="req">*</span></label><input id="vf1" type="text" required placeholder="First name" autocomplete="given-name"></div>
+            <div class="fg"><label for="vf2">Last Name <span class="req">*</span></label><input id="vf2" type="text" required placeholder="Last name" autocomplete="family-name"></div>
           </div>
-          <div class="fg">
-            <label for="vf3">Phone <span class="req">*</span></label>
-            <input id="vf3" type="tel" required placeholder="+65 XXXX XXXX" autocomplete="tel">
-          </div>
-          <div class="fg">
-            <label for="vf4">Email</label>
-            <input id="vf4" type="email" placeholder="your@email.com" autocomplete="email">
-          </div>
-          <div class="fg">
-            <label for="vf5">How would you like to help?</label>
-            <textarea id="vf5" rows="3" placeholder="Share your skills or what draws you to GalUP…"></textarea>
-          </div>
+          <div class="fg"><label for="vf3">Phone <span class="req">*</span></label><input id="vf3" type="tel" required placeholder="+65 XXXX XXXX" autocomplete="tel"></div>
+          <div class="fg"><label for="vf4">Email</label><input id="vf4" type="email" placeholder="your@email.com" autocomplete="email"></div>
+          <div class="fg"><label for="vf5">How would you like to help?</label><textarea id="vf5" rows="3" placeholder="Share your skills or what draws you to GalUP…"></textarea></div>
           <button type="submit" class="btn btn-coral" style="width:100%;justify-content:center">Send Request &rarr;</button>
         </form>
         <div id="volOk" class="form-ok" hidden>
@@ -925,23 +846,11 @@ input,textarea{font-family:inherit;font-size:inherit}
       <div class="form-wrap rv-r">
         <form id="ctForm">
           <div class="form-row">
-            <div class="fg">
-              <label for="cf1">First Name <span class="req">*</span></label>
-              <input id="cf1" type="text" required placeholder="First name" autocomplete="given-name">
-            </div>
-            <div class="fg">
-              <label for="cf2">Last Name</label>
-              <input id="cf2" type="text" placeholder="Last name" autocomplete="family-name">
-            </div>
+            <div class="fg"><label for="cf1">First Name <span class="req">*</span></label><input id="cf1" type="text" required placeholder="First name" autocomplete="given-name"></div>
+            <div class="fg"><label for="cf2">Last Name</label><input id="cf2" type="text" placeholder="Last name" autocomplete="family-name"></div>
           </div>
-          <div class="fg">
-            <label for="cf3">Email <span class="req">*</span></label>
-            <input id="cf3" type="email" required placeholder="your@email.com" autocomplete="email">
-          </div>
-          <div class="fg">
-            <label for="cf4">Message</label>
-            <textarea id="cf4" rows="5" placeholder="Tell us what's on your mind…"></textarea>
-          </div>
+          <div class="fg"><label for="cf3">Email <span class="req">*</span></label><input id="cf3" type="email" required placeholder="your@email.com" autocomplete="email"></div>
+          <div class="fg"><label for="cf4">Message</label><textarea id="cf4" rows="5" placeholder="Tell us what's on your mind…"></textarea></div>
           <button type="submit" class="btn btn-coral" style="width:100%;justify-content:center">Send Message &rarr;</button>
         </form>
         <div id="ctOk" class="form-ok" hidden>
@@ -998,7 +907,7 @@ input,textarea{font-family:inherit;font-size:inherit}
       var g=function(id){return document.getElementById(id);};
       if(d.hero){
         var h=g('cms-hero-h1');
-        if(h)h.innerHTML=d.hero.headline+'<br>a <em>'+d.hero.headline_em+'</em>';
+        if(h)h.innerHTML=d.hero.headline+'<br>a <em>'+d.hero.headline_em+'</em>';
         var s=g('cms-hero-sub');
         if(s)s.textContent=d.hero.subheading||'';
       }
@@ -1025,96 +934,75 @@ input,textarea{font-family:inherit;font-size:inherit}
 })();
 
 /* Nav scroll */
-var nav = document.getElementById('nav');
-function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 72); }
+var nav=document.getElementById('nav');
+function onScroll(){nav.classList.toggle('scrolled',window.scrollY>72);}
 onScroll();
-window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('scroll',onScroll,{passive:true});
 
 /* Parallax hero */
-var heroBg = document.querySelector('.hero-bg');
-function parallax(){
-  if(!heroBg) return;
-  var scrolled = window.scrollY;
-  heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
-}
-window.addEventListener('scroll', parallax, {passive:true});
+var heroBg=document.querySelector('.hero-bg');
+function parallax(){if(!heroBg)return;heroBg.style.transform='translateY('+(window.scrollY*0.3)+'px)';}
+window.addEventListener('scroll',parallax,{passive:true});
 
 /* Burger */
-var burger = document.getElementById('burger');
-var mobNav = document.getElementById('mob-nav');
-function openMenu(){
-  mobNav.classList.add('open');
-  burger.classList.add('open');
-  burger.setAttribute('aria-expanded','true');
-  document.body.style.overflow='hidden';
-}
-function closeMenu(){
-  mobNav.classList.remove('open');
-  burger.classList.remove('open');
-  burger.setAttribute('aria-expanded','false');
-  document.body.style.overflow='';
-}
-burger.addEventListener('click', function(){ mobNav.classList.contains('open') ? closeMenu() : openMenu(); });
-mobNav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
-document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+var burger=document.getElementById('burger');
+var mobNav=document.getElementById('mob-nav');
+function openMenu(){mobNav.classList.add('open');burger.classList.add('open');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+function closeMenu(){mobNav.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+burger.addEventListener('click',function(){mobNav.classList.contains('open')?closeMenu():openMenu();});
+mobNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
 
 /* Smooth scroll */
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click', function(e){
-    var id = this.getAttribute('href');
-    if(id==='#') return;
-    var t = document.querySelector(id);
-    if(!t) return;
+  a.addEventListener('click',function(e){
+    var id=this.getAttribute('href');
+    if(id==='#')return;
+    var t=document.querySelector(id);
+    if(!t)return;
     e.preventDefault();
-    window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - 76, behavior:'smooth'});
+    window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-76,behavior:'smooth'});
   });
 });
 
-/* Scroll reveal — respect inline transition-delay */
-var obs = new IntersectionObserver(function(entries){
+/* Scroll reveal */
+var obs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){
-    if(!e.isIntersecting) return;
-    var el = e.target;
-    /* Only use sibling stagger if no explicit inline delay */
+    if(!e.isIntersecting)return;
+    var el=e.target;
     if(!el.style.transitionDelay){
-      var siblings = Array.from(el.parentElement.querySelectorAll('.rv,.rv-l,.rv-r,.rv-scale'));
-      var i = siblings.indexOf(el);
-      el.style.transitionDelay = Math.min(i * 60, 300) + 'ms';
+      var siblings=Array.from(el.parentElement.querySelectorAll('.rv,.rv-l,.rv-r,.rv-scale'));
+      var i=siblings.indexOf(el);
+      el.style.transitionDelay=Math.min(i*60,300)+'ms';
     }
     el.classList.add('in');
     obs.unobserve(el);
   });
-},{threshold:0.06, rootMargin:'0px 0px -24px 0px'});
-document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-scale').forEach(function(el){ obs.observe(el); });
+},{threshold:0.06,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-scale').forEach(function(el){obs.observe(el);});
 
-/* Animated counters — easeOutCubic */
-function easeOutCubic(t){ return 1 - Math.pow(1-t, 3); }
+/* Animated counters */
+function easeOutCubic(t){return 1-Math.pow(1-t,3);}
 function animCount(el){
-  var target = +el.dataset.target;
-  var dur = 1800;
-  var t0 = performance.now();
+  var target=+el.dataset.target;
+  var dur=1800;
+  var t0=performance.now();
   function tick(now){
-    var p = Math.min((now - t0) / dur, 1);
-    el.textContent = Math.round(easeOutCubic(p) * target);
-    if(p < 1) requestAnimationFrame(tick);
-    else el.textContent = target;
+    var p=Math.min((now-t0)/dur,1);
+    el.textContent=Math.round(easeOutCubic(p)*target);
+    if(p<1)requestAnimationFrame(tick);
+    else el.textContent=target;
   }
   requestAnimationFrame(tick);
 }
-var cObs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){ animCount(e.target); cObs.unobserve(e.target); }
-  });
+var cObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){animCount(e.target);cObs.unobserve(e.target);}});
 },{threshold:.4});
-document.querySelectorAll('.counter').forEach(function(el){ cObs.observe(el); });
+document.querySelectorAll('.counter').forEach(function(el){cObs.observe(el);});
 
 /* Forms */
-document.getElementById('volForm').addEventListener('submit',function(e){
-  e.preventDefault(); this.style.display='none'; document.getElementById('volOk').hidden=false;
-});
-document.getElementById('ctForm').addEventListener('submit',function(e){
-  e.preventDefault(); this.style.display='none'; document.getElementById('ctOk').hidden=false;
-});
+document.getElementById('volForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('volOk').hidden=false;});
+document.getElementById('ctForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('ctOk').hidden=false;});
 
 })();
 </script>
