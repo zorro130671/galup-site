@@ -1,11 +1,6 @@
 backend:
-  name: github
-  repo: zorro130671/galup-site
+  name: git-gateway
   branch: master
-  base_url: https://galup-site.zahipad.workers.dev
-
-site_url: https://galup-site.zahipad.workers.dev
-display_url: https://galup-site.zahipad.workers.dev
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -22,9 +17,9 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - { label: "Main Headline", name: "headline", widget: "string", hint: "First line of the hero banner (e.g. 'Every Woman Deserves')" }
-              - { label: "Highlighted Phrase", name: "headline_em", widget: "string", hint: "The coral-coloured words on the second line (e.g. 'Second Chance.')" }
-              - { label: "Subheading", name: "subheading", widget: "text", hint: "The paragraph beneath the headline" }
+              - { label: "Main Headline", name: "headline", widget: "string" }
+              - { label: "Highlighted Phrase", name: "headline_em", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "text" }
 
           - label: "Stats Bar"
             name: "stats"
