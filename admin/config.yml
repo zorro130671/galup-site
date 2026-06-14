@@ -6,6 +6,11 @@ backend:
 site_url: https://galup-site.zahipad.workers.dev
 display_url: https://galup-site.zahipad.workers.dev
 
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+media_library:
+  name: "uploadcare"
+
 collections:
   - name: "home"
     label: "Home Page"
